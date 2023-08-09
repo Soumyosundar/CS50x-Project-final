@@ -1,0 +1,30 @@
+{% extends "layout.html" %}
+
+{% block title %}
+    History
+{% endblock %}
+
+{% block main %}
+    <table class="table table-triped">
+        <thead>
+            <tr>
+                <th>Symbol</th>
+                <th>Company Name</th>
+                <th>Shares transacted</th>
+                <th>Transaction price</th>
+                <th>Type of transaction</th>
+            </tr>
+        </thead>
+        <tbody>
+            {% for t in IndexT %}
+                <tr>
+                    <td>{{ t.symbol }}</td>
+                    <td>{{ t.companyName }}</td>
+                    <td>{{ t.shares }}</td>
+                    <td>{{ t.price }}</td>
+                    <td>{{ t.Type}}</td>
+                </tr>
+            {% endfor %}
+        </tbody>
+    </table>
+{% endblock %}

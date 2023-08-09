@@ -1,0 +1,27 @@
+{% extends "layout.html" %}
+
+{% block title %}
+    Portfolio Analysis
+{% endblock %}
+
+{% block main %}
+    <table class="table table-triped">
+        <thead>
+            <tr>
+                <th>Symbol</th>
+                <th>Shares</th>
+                <th>Investment price</th>
+                <th>Return price</th>
+             </tr>
+        </thead>
+            {% for t in IndexT %}
+                <tr>
+                    <td>{{ t.F1}}</td>
+                    <td>{{ t.F3}}</td>
+                    <td>{{ t.F4}}</td>
+                    <td>{{ t.F5}}</td>
+                </tr>
+            {% endfor %}
+        </tbody>
+    </table>
+{% endblock %}

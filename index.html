@@ -1,0 +1,26 @@
+{% extends "layout.html" %}
+
+{% block title %}
+    Index
+{% endblock %}
+
+{% block main %}
+    <table class="table table-triped">
+        <thead>
+            <tr>
+                <th>Symbol</th>
+                <th>Company</th>
+                <th>shares</th>
+            </tr>
+        </thead>
+        <tbody>
+            {% for t in IndexT %}
+                <tr>
+                    <td>{{ t.symbol }}</td>
+                    <td>{{ t.company }}</td>
+                    <td>{{ t.shares}}</td>
+                </tr>
+            {% endfor %}
+        </tbody>
+    </table>
+{% endblock %}
